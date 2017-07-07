@@ -1,0 +1,22 @@
+c:\users\brian\documents\visual studio 2017\Projects\HomeUtilityAuditingProgram\HomeUtilityAuditingProgram\bin\Debug\HomeUtilityAuditingProgram.exe.config
+c:\users\brian\documents\visual studio 2017\Projects\HomeUtilityAuditingProgram\HomeUtilityAuditingProgram\bin\Debug\HomeUtilityAuditingProgram.exe
+c:\users\brian\documents\visual studio 2017\Projects\HomeUtilityAuditingProgram\HomeUtilityAuditingProgram\bin\Debug\HomeUtilityAuditingProgram.pdb
+c:\users\brian\documents\visual studio 2017\Projects\HomeUtilityAuditingProgram\HomeUtilityAuditingProgram\bin\Debug\HomeUtilityAuditingProgram.xml
+c:\users\brian\documents\visual studio 2017\Projects\HomeUtilityAuditingProgram\HomeUtilityAuditingProgram\obj\Debug\HomeUtilityAuditingProgram.vbprojResolveAssemblyReference.cache
+c:\users\brian\documents\visual studio 2017\Projects\HomeUtilityAuditingProgram\HomeUtilityAuditingProgram\obj\Debug\HomeUtilityAuditingProgram.Form1.resources
+c:\users\brian\documents\visual studio 2017\Projects\HomeUtilityAuditingProgram\HomeUtilityAuditingProgram\obj\Debug\HomeUtilityAuditingProgram.Resources.resources
+c:\users\brian\documents\visual studio 2017\Projects\HomeUtilityAuditingProgram\HomeUtilityAuditingProgram\obj\Debug\HomeUtilityAuditingProgram.vbproj.GenerateResource.Cache
+c:\users\brian\documents\visual studio 2017\Projects\HomeUtilityAuditingProgram\HomeUtilityAuditingProgram\obj\Debug\HomeUtilityAuditingProgram.exe
+c:\users\brian\documents\visual studio 2017\Projects\HomeUtilityAuditingProgram\HomeUtilityAuditingProgram\obj\Debug\HomeUtilityAuditingProgram.xml
+c:\users\brian\documents\visual studio 2017\Projects\HomeUtilityAuditingProgram\HomeUtilityAuditingProgram\obj\Debug\HomeUtilityAuditingProgram.pdb
+D:\University of Phoenix\NET 1\HomeUtilityAuditingProgram\HomeUtilityAuditingProgram\bin\Debug\HomeUtilityAuditingProgram.exe.config
+D:\University of Phoenix\NET 1\HomeUtilityAuditingProgram\HomeUtilityAuditingProgram\bin\Debug\HomeUtilityAuditingProgram.exe
+D:\University of Phoenix\NET 1\HomeUtilityAuditingProgram\HomeUtilityAuditingProgram\bin\Debug\HomeUtilityAuditingProgram.pdb
+D:\University of Phoenix\NET 1\HomeUtilityAuditingProgram\HomeUtilityAuditingProgram\bin\Debug\HomeUtilityAuditingProgram.xml
+D:\University of Phoenix\NET 1\HomeUtilityAuditingProgram\HomeUtilityAuditingProgram\obj\Debug\HomeUtilityAuditingProgram.vbprojResolveAssemblyReference.cache
+D:\University of Phoenix\NET 1\HomeUtilityAuditingProgram\HomeUtilityAuditingProgram\obj\Debug\HomeUtilityAuditingProgram.Resources.resources
+D:\University of Phoenix\NET 1\HomeUtilityAuditingProgram\HomeUtilityAuditingProgram\obj\Debug\HomeUtilityAuditingProgram.vbproj.GenerateResource.Cache
+D:\University of Phoenix\NET 1\HomeUtilityAuditingProgram\HomeUtilityAuditingProgram\obj\Debug\HomeUtilityAuditingProgram.exe
+D:\University of Phoenix\NET 1\HomeUtilityAuditingProgram\HomeUtilityAuditingProgram\obj\Debug\HomeUtilityAuditingProgram.xml
+D:\University of Phoenix\NET 1\HomeUtilityAuditingProgram\HomeUtilityAuditingProgram\obj\Debug\HomeUtilityAuditingProgram.pdb
+D:\University of Phoenix\NET 1\HomeUtilityAuditingProgram\HomeUtilityAuditingProgram\obj\Debug\HomeUtilityAuditingProgram.MainForm.resources
