@@ -114,36 +114,38 @@ Module ExportModule
             ByVal array As Integer(),
             applianceItem As String,
             ByVal costArray As Integer())
-
-        If (array.Length = 3) Then
-            Using sw As StreamWriter = New StreamWriter(path)
-                sw.Write(
-                    applianceItem + " : " &
-                    "Power Needed: " + array(0) &
-                    "Cost Per Hour: " + array(1) &
-                    "Hours Used Per Day: " + array(2) &
-                    "-------------------" &
-                    "Total Amount: " + costArray(0) &
-                    "Monthly Costs: " + costArray(1) &
-                    "Yearly Costs: " + costArray(2)
-                    )
-            End Using
-        Else
-            Using sw As StreamWriter = New StreamWriter(path)
-                sw.Write(
-                    applianceItem + " : " &
-                    "Power Needed: " + array(0) &
-                    "Cost Per Hour: " + array(1) &
-                    "Hours Used Per Day: " + array(2) &
-                    "Gallons of Water: " + array(3) &
-                    "Cost of Water: " + array(4) &
-                    "-------------------" &
-                    "Total Amount: " + costArray(0) &
-                    "Monthly Costs: " + costArray(1) &
-                    "Yearly Costs: " + costArray(2)
-                    )
-            End Using
-        End If
-
+        Try
+            If (array.Length = 3) Then
+                Using sw As StreamWriter = New StreamWriter(path)
+                    sw.Write(
+                        applianceItem + " : " &
+                        "Power Needed: " + array(0) &
+                        "Cost Per Hour: " + array(1) &
+                        "Hours Used Per Day: " + array(2) &
+                        "-------------------" &
+                        "Total Amount: " + costArray(0) &
+                        "Monthly Costs: " + costArray(1) &
+                        "Yearly Costs: " + costArray(2)
+                        )
+                End Using
+            Else
+                Using sw As StreamWriter = New StreamWriter(path)
+                    sw.Write(
+                        applianceItem + " : " &
+                        "Power Needed: " + array(0) &
+                        "Cost Per Hour: " + array(1) &
+                        "Hours Used Per Day: " + array(2) &
+                        "Gallons of Water: " + array(3) &
+                        "Cost of Water: " + array(4) &
+                        "-------------------" &
+                        "Total Amount: " + costArray(0) &
+                        "Monthly Costs: " + costArray(1) &
+                        "Yearly Costs: " + costArray(2)
+                        )
+                End Using
+            End If
+        Catch ex As Exception
+            MessageBox.Show("Error: " + ex.Message)
+        End Try
     End Sub
 End Module
