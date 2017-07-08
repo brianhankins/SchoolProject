@@ -12,7 +12,6 @@ Public Class MainForm
     Private Sub MainForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'Maximize window as it may hide buttons
         TopMost = True
-        FormBorderStyle = FormBorderStyle.None
         WindowState = FormWindowState.Maximized
 
         'This text is added only once to create the file.
@@ -112,6 +111,11 @@ Public Class MainForm
     Private Sub ExportFileBtn_Click(sender As Object, e As EventArgs) Handles ExportFileBtn.Click
         CalculateButton.PerformClick()
 
+        Dim arrayCostValues(3) As Integer
+        arrayCostValues(0) = totalAmount
+        arrayCostValues(1) = calculateMonthCosts
+        arrayCostValues(1) = calculateYearCosts
+
         If (applianceList.SelectedItem.ToString = "Washer") Then
             Dim applianceWasherValues(5) As Integer
             applianceWasherValues(0) = kilowattNumber.Value
@@ -122,7 +126,7 @@ Public Class MainForm
 
             Dim applianceWasher = applianceList.SelectedItem.ToString()
 
-            ExportFile(applianceWasherValues, applianceWasher)
+            ExportFile(applianceWasherValues, applianceWasher, arrayCostValues)
         Else
             Dim applianceValues(3) As Integer
             applianceValues(0) = kilowattNumber.Value
@@ -131,7 +135,7 @@ Public Class MainForm
 
             Dim applianceItem = applianceList.SelectedItem.ToString()
 
-            ExportFile(applianceValues, applianceItem)
+            ExportFile(applianceValues, applianceItem, arrayCostValues)
         End If
     End Sub
 
