@@ -1,14 +1,16 @@
 ﻿Imports System.IO
 
 Public Class MainForm
-    Private path As String = ""
+    Private path As String
 
 
     Public import As New ImportModule(Me)
 
     Private Sub MainForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'This text is added only once to create the file.
-        InitialExport()
+        Export()
+        path = fullPath
+
     End Sub
 
     Private Sub ApplianceList_SelectedIndexChanged(sender As Object, e As EventArgs) Handles applianceList.SelectedIndexChanged
@@ -99,6 +101,6 @@ Public Class MainForm
 
     'Saves the current form in a text file.
     Private Sub ExportFileBtn_Click(sender As Object, e As EventArgs) Handles ExportFileBtn.Click
-        ExportDefaultVaules(path)
+        Export()
     End Sub
 End Class

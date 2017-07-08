@@ -1,12 +1,12 @@
 ﻿Imports System.IO
 
 Module ExportModule
-    Private subPath = ""
+    Private subPath As String
     Private configFile = "\HUAP_Config.txt"
-    Private fullPath As String
+    Public fullPath As String
 
     'Set up initial file export
-    Public Sub InitialExport()
+    Public Sub Export()
         Try
             Dim dialog As New FolderBrowserDialog() With {
                 .RootFolder = Environment.SpecialFolder.Desktop,
@@ -30,30 +30,6 @@ Module ExportModule
 
         Catch ex As Exception
             MessageBox.Show("An error ocurred: " + ex.Message)
-        End Try
-    End Sub
-
-    'Saves text file to local machine
-    Public Sub ExportDefaultVaules(path As String)
-        Try
-            'Check if file exists at path location & rename file if exists
-            If (File.Exists(path)) = True Then
-                Dim userInput As String
-
-                userInput = InputBox("What would you like to name this text file?", "Cancel", Nothing)
-                If (userInput Is Nothing OrElse userInput = "") Then
-                    MessageBox.Show("Error: Cancelled Export")
-                Else
-                    path = subPath + userInput + ".txt"
-                    MessageBox.Show("The file has been saved to: " + path)
-                End If
-            End If
-
-            'Start Stream Writer file export
-            SWriter(path)
-
-        Catch
-            MessageBox.Show("Error: An error occured. Please try again.")
         End Try
     End Sub
 
