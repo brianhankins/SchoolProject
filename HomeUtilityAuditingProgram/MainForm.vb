@@ -11,7 +11,6 @@ Public Class MainForm
 
     Private Sub MainForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'Maximize window as it may hide buttons
-        TopMost = True
         WindowState = FormWindowState.Maximized
 
         'This text is added only once to create the file.
