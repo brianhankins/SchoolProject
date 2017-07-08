@@ -3,6 +3,8 @@
 Public Class MainForm
     Private path As String
     Public totalAmount As Integer
+    Public calculateMonthCosts As Integer
+    Public calculateYearCosts As Integer
 
 
     Public import As New ImportModule(Me)
@@ -108,13 +110,11 @@ Public Class MainForm
 
     'Saves the current form in a text file.
     Private Sub ExportFileBtn_Click(sender As Object, e As EventArgs) Handles ExportFileBtn.Click
-        Export()
+        ExportFile()
     End Sub
 
     'Calculates Monthly and Yearly costs
     Private Sub TotalCostBtn_Click(sender As Object, e As EventArgs) Handles totalCostsBtn.Click
-        Dim calculateMonthCosts As Integer
-        Dim calculateYearCosts As Integer
         Dim calculateDailyCost As Integer
         Dim daysInMonth = 30
         Dim daysInYear = 365
