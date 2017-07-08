@@ -2,11 +2,17 @@
 
 Public Class MainForm
     Private path As String
+    Public totalAmount As Integer
 
 
     Public import As New ImportModule(Me)
 
     Private Sub MainForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'Maximize window as it may hide buttons
+        TopMost = True
+        FormBorderStyle = FormBorderStyle.None
+        WindowState = FormWindowState.Maximized
+
         'This text is added only once to create the file.
         Export()
         path = fullPath
@@ -66,7 +72,6 @@ Public Class MainForm
     End Sub
 
     Private Sub CalculateButton_Click(sender As Object, e As EventArgs) Handles CalculateButton.Click
-        Dim totalAmount As Double
         Dim waterAmount As Double
 
         'Check to see if item in dropdown was selected - show error if nothing was selected
@@ -89,7 +94,9 @@ Public Class MainForm
 
             'Calculate all other non-washer selections and show total amount label
         Else
+            showTotalCostsLbl.Visible = False
             TotalLabel.Visible = True
+            totalCostsBtn.Visible = True
 
             totalAmount = kilowattNumber.Value * hoursUsedNumber.Value * powerNeededNumber.Value
 
@@ -102,5 +109,31 @@ Public Class MainForm
     'Saves the current form in a text file.
     Private Sub ExportFileBtn_Click(sender As Object, e As EventArgs) Handles ExportFileBtn.Click
         Export()
+    End Sub
+
+    'Calculates Monthly and Yearly costs
+    Private Sub TotalCostBtn_Click(sender As Object, e As EventArgs) Handles totalCostsBtn.Click
+        Dim calculateMonthCosts As Integer
+        Dim calculateYearCosts As Integer
+        Dim calculateDailyCost As Integer
+        Dim daysInMonth = 30
+        Dim daysInYear = 365
+
+        TotalLabel.Visible = False
+        TotalWaterLabel.Visible = False
+        showTotalCostsLbl.Visible = True
+
+        calculateDailyCost = 24 \ hoursUsedNumber.Value
+
+        calculateMonthCosts = totalAmount * calculateDailyCost * daysInMonth
+        calculateYearCosts = totalAmount * calculateDailyCost * daysInYear
+
+        showTotalCostsLbl.Text = "The total operating costs are: Monthly: " + calculateMonthCosts.ToString() + " Yearly: " + calculateYearCosts.ToString()
+
+    End Sub
+
+    'Close the Form
+    Private Sub ExitAppBtn_Click(sender As Object, e As EventArgs) Handles ExitAppBtn.Click
+        Close()
     End Sub
 End Class
