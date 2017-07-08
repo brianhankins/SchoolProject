@@ -20,3 +20,14 @@ D:\University of Phoenix\NET 1\HomeUtilityAuditingProgram\HomeUtilityAuditingPro
 D:\University of Phoenix\NET 1\HomeUtilityAuditingProgram\HomeUtilityAuditingProgram\obj\Debug\HomeUtilityAuditingProgram.xml
 D:\University of Phoenix\NET 1\HomeUtilityAuditingProgram\HomeUtilityAuditingProgram\obj\Debug\HomeUtilityAuditingProgram.pdb
 D:\University of Phoenix\NET 1\HomeUtilityAuditingProgram\HomeUtilityAuditingProgram\obj\Debug\HomeUtilityAuditingProgram.MainForm.resources
+C:\Users\BHankins\Documents\GitHub Files\SchoolProject\HomeUtilityAuditingProgram\bin\Debug\HomeUtilityAuditingProgram.exe.config
+C:\Users\BHankins\Documents\GitHub Files\SchoolProject\HomeUtilityAuditingProgram\bin\Debug\HomeUtilityAuditingProgram.exe
+C:\Users\BHankins\Documents\GitHub Files\SchoolProject\HomeUtilityAuditingProgram\bin\Debug\HomeUtilityAuditingProgram.pdb
+C:\Users\BHankins\Documents\GitHub Files\SchoolProject\HomeUtilityAuditingProgram\bin\Debug\HomeUtilityAuditingProgram.xml
+C:\Users\BHankins\Documents\GitHub Files\SchoolProject\HomeUtilityAuditingProgram\obj\Debug\HomeUtilityAuditingProgram.vbprojResolveAssemblyReference.cache
+C:\Users\BHankins\Documents\GitHub Files\SchoolProject\HomeUtilityAuditingProgram\obj\Debug\HomeUtilityAuditingProgram.MainForm.resources
+C:\Users\BHankins\Documents\GitHub Files\SchoolProject\HomeUtilityAuditingProgram\obj\Debug\HomeUtilityAuditingProgram.Resources.resources
+C:\Users\BHankins\Documents\GitHub Files\SchoolProject\HomeUtilityAuditingProgram\obj\Debug\HomeUtilityAuditingProgram.vbproj.GenerateResource.Cache
+C:\Users\BHankins\Documents\GitHub Files\SchoolProject\HomeUtilityAuditingProgram\obj\Debug\HomeUtilityAuditingProgram.exe
+C:\Users\BHankins\Documents\GitHub Files\SchoolProject\HomeUtilityAuditingProgram\obj\Debug\HomeUtilityAuditingProgram.xml
+C:\Users\BHankins\Documents\GitHub Files\SchoolProject\HomeUtilityAuditingProgram\obj\Debug\HomeUtilityAuditingProgram.pdb

@@ -1,17 +1,14 @@
 ﻿Imports System.IO
 
 Public Class MainForm
-    Private path As String = "c:\HUAP.txt"
+    Private path As String = ""
 
 
     Public import As New ImportModule(Me)
 
     Private Sub MainForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'This text is added only once to create the file.
-        If (File.Exists(path)) = False Then
-            ExportDefaultVaules(path)
-            MessageBox.Show("Instructor: File saved to :" + path)
-        End If
+        InitialExport()
     End Sub
 
     Private Sub ApplianceList_SelectedIndexChanged(sender As Object, e As EventArgs) Handles applianceList.SelectedIndexChanged
