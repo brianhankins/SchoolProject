@@ -110,7 +110,29 @@ Public Class MainForm
 
     'Saves the current form in a text file.
     Private Sub ExportFileBtn_Click(sender As Object, e As EventArgs) Handles ExportFileBtn.Click
-        ExportFile()
+        CalculateButton.PerformClick()
+
+        If (applianceList.SelectedItem.ToString = "Washer") Then
+            Dim applianceWasherValues(5) As Integer
+            applianceWasherValues(0) = kilowattNumber.Value
+            applianceWasherValues(1) = hoursUsedNumber.Value
+            applianceWasherValues(2) = powerNeededNumber.Value
+            applianceWasherValues(3) = numberOfGallons.Value
+            applianceWasherValues(4) = costofWater.Value
+
+            Dim applianceWasher = applianceList.SelectedItem.ToString()
+
+            ExportFile(applianceWasherValues, applianceWasher)
+        Else
+            Dim applianceValues(3) As Integer
+            applianceValues(0) = kilowattNumber.Value
+            applianceValues(1) = hoursUsedNumber.Value
+            applianceValues(2) = powerNeededNumber.Value
+
+            Dim applianceItem = applianceList.SelectedItem.ToString()
+
+            ExportFile(applianceValues, applianceItem)
+        End If
     End Sub
 
     'Calculates Monthly and Yearly costs
