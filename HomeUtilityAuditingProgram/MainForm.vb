@@ -108,7 +108,13 @@ Public Class MainForm
 
     'Saves the current form in a text file.
     Private Sub ExportFileBtn_Click(sender As Object, e As EventArgs) Handles ExportFileBtn.Click
-        CalculateButton.PerformClick()
+        'Checks to see if appliance list was selected
+        If (applianceList.SelectedIndex = -1) Then
+            MessageBox.Show("Please select an appliance from the list.")
+            Return
+        Else
+            CalculateButton.PerformClick()
+        End If
 
         Dim arrayCostValues(3) As Integer
         arrayCostValues(0) = totalAmount

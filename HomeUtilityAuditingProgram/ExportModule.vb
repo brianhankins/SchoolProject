@@ -119,28 +119,28 @@ Module ExportModule
                 Using sw As StreamWriter = New StreamWriter(path)
                     sw.Write(
                         applianceItem + " : " &
-                        "Power Needed: " + array(0) &
-                        "Cost Per Hour: " + array(1) &
-                        "Hours Used Per Day: " + array(2) &
+                        "Power Needed: " + array(0).ToString() &
+                        "Cost Per Hour: " + array(1).ToString() &
+                        "Hours Used Per Day: " + array(2).ToString() &
                         "-------------------" &
-                        "Total Amount: " + costArray(0) &
-                        "Monthly Costs: " + costArray(1) &
-                        "Yearly Costs: " + costArray(2)
+                        "Total Amount: " + costArray(0).ToString() &
+                        "Monthly Costs: " + costArray(1).ToString() &
+                        "Yearly Costs: " + costArray(2).ToString()
                         )
                 End Using
             Else
                 Using sw As StreamWriter = New StreamWriter(path)
                     sw.Write(
                         applianceItem + " : " &
-                        "Power Needed: " + array(0) &
-                        "Cost Per Hour: " + array(1) &
-                        "Hours Used Per Day: " + array(2) &
-                        "Gallons of Water: " + array(3) &
-                        "Cost of Water: " + array(4) &
+                        "Power Needed: " + array(0).ToString() &
+                        "Cost Per Hour: " + array(1).ToString() &
+                        "Hours Used Per Day: " + array(2).ToString() &
+                        "Gallons of Water: " + array(3).ToString() &
+                        "Cost of Water: " + array(4).ToString() &
                         "-------------------" &
-                        "Total Amount: " + costArray(0) &
-                        "Monthly Costs: " + costArray(1) &
-                        "Yearly Costs: " + costArray(2)
+                        "Total Amount: " + costArray(0).ToString() &
+                        "Monthly Costs: " + costArray(1).ToString() &
+                        "Yearly Costs: " + costArray(2).ToString()
                         )
                 End Using
             End If
