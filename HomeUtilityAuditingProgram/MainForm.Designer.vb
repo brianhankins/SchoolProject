@@ -218,7 +218,7 @@ Partial Class MainForm
         'ExportFileBtn
         '
         Me.ExportFileBtn.BackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.ExportFileBtn.Location = New System.Drawing.Point(965, 14)
+        Me.ExportFileBtn.Location = New System.Drawing.Point(931, 14)
         Me.ExportFileBtn.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.ExportFileBtn.Name = "ExportFileBtn"
         Me.ExportFileBtn.Size = New System.Drawing.Size(164, 42)

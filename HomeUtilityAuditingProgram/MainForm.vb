@@ -114,15 +114,16 @@ Public Class MainForm
             Return
         Else
             CalculateButton.PerformClick()
+            totalCostsBtn.PerformClick()
         End If
 
-        Dim arrayCostValues(3) As Integer
+        Dim arrayCostValues(2) As Integer
         arrayCostValues(0) = totalAmount
         arrayCostValues(1) = calculateMonthCosts
-        arrayCostValues(1) = calculateYearCosts
+        arrayCostValues(2) = calculateYearCosts
 
         If (applianceList.SelectedItem.ToString = "Washer") Then
-            Dim applianceWasherValues(5) As Integer
+            Dim applianceWasherValues(4) As Integer
             applianceWasherValues(0) = kilowattNumber.Value
             applianceWasherValues(1) = hoursUsedNumber.Value
             applianceWasherValues(2) = powerNeededNumber.Value
@@ -133,7 +134,7 @@ Public Class MainForm
 
             ExportFile(applianceWasherValues, applianceWasher, arrayCostValues)
         Else
-            Dim applianceValues(3) As Integer
+            Dim applianceValues(2) As Integer
             applianceValues(0) = kilowattNumber.Value
             applianceValues(1) = hoursUsedNumber.Value
             applianceValues(2) = powerNeededNumber.Value

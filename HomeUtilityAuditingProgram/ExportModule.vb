@@ -38,9 +38,9 @@ Module ExportModule
     End Sub
 
     Public Sub ExportFile(
-        ByVal fieldArray As Integer(),
+        ByRef fieldArray As Integer(),
         appliance As String,
-        ByVal arrayCost As Integer())
+        ByRef arrayCost As Integer())
 
         Try
             Dim dialog As New FolderBrowserDialog() With {
@@ -54,6 +54,7 @@ Module ExportModule
 
             Else
                 MessageBox.Show("Error: Export file not saved. Please try again.")
+                Return
             End If
 
             fullPath = exportSubPath + exportFileName
@@ -63,7 +64,7 @@ Module ExportModule
             MessageBox.Show("Success! Export file saved at: " + fullPath)
 
         Catch ex As Exception
-            MessageBox.Show("An error ocurred: " + ex.Message)
+            MessageBox.Show("An error ocurred: " + ex.Message + " at " + ex.TargetSite.ToString())
         End Try
     End Sub
 
@@ -111,41 +112,39 @@ Module ExportModule
 
     Private Sub SWriterExport(
             path As String,
-            ByVal array As Integer(),
+            ByVal fieldValueArray As Integer(),
             applianceItem As String,
             ByVal costArray As Integer())
         Try
-            If (array.Length = 3) Then
+            If (fieldValueArray.Length = 3) Then
                 Using sw As StreamWriter = New StreamWriter(path)
-                    sw.Write(
-                        applianceItem + " : " &
-                        "Power Needed: " + array(0).ToString() &
-                        "Cost Per Hour: " + array(1).ToString() &
-                        "Hours Used Per Day: " + array(2).ToString() &
-                        "-------------------" &
-                        "Total Amount: " + costArray(0).ToString() &
-                        "Monthly Costs: " + costArray(1).ToString() &
-                        "Yearly Costs: " + costArray(2).ToString()
-                        )
+                    sw.WriteLine("Appliance:" + applianceItem)
+                    sw.WriteLine("Power Needed: " + fieldValueArray(0).ToString())
+                    sw.WriteLine("Cost Per Hour: " + fieldValueArray(1).ToString())
+                    sw.WriteLine("Hours Used Per Day: " + fieldValueArray(2).ToString())
+                    sw.WriteLine("----- Totals --------")
+                    sw.WriteLine("Total Amount: " + costArray(0).ToString())
+                    sw.WriteLine("Monthly Costs: " + costArray(1).ToString())
+                    sw.WriteLine("Yearly Costs: " + costArray(2).ToString())
+
                 End Using
             Else
                 Using sw As StreamWriter = New StreamWriter(path)
-                    sw.Write(
-                        applianceItem + " : " &
-                        "Power Needed: " + array(0).ToString() &
-                        "Cost Per Hour: " + array(1).ToString() &
-                        "Hours Used Per Day: " + array(2).ToString() &
-                        "Gallons of Water: " + array(3).ToString() &
-                        "Cost of Water: " + array(4).ToString() &
-                        "-------------------" &
-                        "Total Amount: " + costArray(0).ToString() &
-                        "Monthly Costs: " + costArray(1).ToString() &
-                        "Yearly Costs: " + costArray(2).ToString()
-                        )
+                    sw.WriteLine("Appliance:" + applianceItem)
+                    sw.WriteLine("Power Needed: " + fieldValueArray(0).ToString())
+                    sw.WriteLine("Cost Per Hour: " + fieldValueArray(1).ToString())
+                    sw.WriteLine("Hours Used Per Day: " + fieldValueArray(2).ToString())
+                    sw.WriteLine("Gallons of Water: " + fieldValueArray(3).ToString())
+                    sw.WriteLine("Cost of Water: " + fieldValueArray(4).ToString())
+                    sw.WriteLine("----- Totals --------")
+                    sw.WriteLine("Total Amount: " + costArray(0).ToString())
+                    sw.WriteLine("Monthly Costs: " + costArray(1).ToString())
+                    sw.WriteLine("Yearly Costs: " + costArray(2).ToString())
+
                 End Using
             End If
         Catch ex As Exception
-            MessageBox.Show("Error: " + ex.Message)
+            MessageBox.Show("Error: " + ex.Message + " at " + ex.TargetSite.ToString())
         End Try
     End Sub
 End Module
